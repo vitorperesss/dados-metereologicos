@@ -1,0 +1,82 @@
+# 🌤️ Previsão de Ilhabela via WhatsApp
+
+Este projeto coleta dados do tempo e das ondas para Ilhabela-SP e envia automaticamente um resumo diário via WhatsApp utilizando Node.js, OpenWeatherMap, Stormglass e Venom Bot.
+
+## 📌 Funcionalidades
+
+- Obtém **temperatura mínima/máxima**, **vento**, **probabilidade de chuva** via OpenWeatherMap
+- Obtém **altura, direção e período das ondas** via Stormglass
+- Envia a previsão para o WhatsApp automaticamente com o **Venom Bot**
+- Pode ser agendado com `cron` no Linux para execução diária
+
+---
+
+## 🔧 Tecnologias utilizadas
+
+- [Node.js](https://nodejs.org/)
+- [Venom Bot](https://github.com/orkestral/venom)
+- [OpenWeatherMap API](https://openweathermap.org/)
+- [Stormglass API](https://stormglass.io/)
+
+
+---
+
+## 🚀 Instalação
+
+### 1. Clone o projeto
+
+```bash
+git clone https://github.com/seu-usuario/previsao-ilhabela-whatsapp.git
+cd previsao-ilhabela-whatsapp
+
+
+2. Instale as dependências
+
+npm install
+
+3. Configure as variáveis de ambiente
+Crie o arquivo .env com suas chaves:
+
+OPENWEATHERMAP_API_KEY=sua_chave_openweathermap
+STORMGLASS_API_KEY=sua_chave_stormglass
+
+
+Você pode criar as chaves gratuitamente nas plataformas:
+
+https://openweathermap.org/api
+
+https://stormglass.io/
+
+
+▶️ Executar o projeto
+
+node previsao.js
+
+Na primeira execução será exibido um QR Code no terminal. Escaneie com seu WhatsApp (como se fosse o WhatsApp Web).
+
+💬 Personalize seu número de destino
+No arquivo previsao.js, edite a constante numero com seu número em formato internacional:
+
+const numero = '5511999999999@c.us'; // Exemplo: DDI + DDD + número
+
+
+⏰ Agendamento com cron (Linux)
+Para rodar automaticamente todo dia às 7h:
+
+crontab -e
+
+Adicione a linha:
+
+0 7 * * * /usr/bin/node /caminho/para/seu/projeto/previsao.js >> /var/log/previsao.log 2>&1
+
+
+
+✅ Exemplo de saída enviada no WhatsApp
+
+Previsão - Ilhabela:
+- Temperatura: mín 21°C / máx 29°C
+- Vento: 4.6 m/s direção 130°
+- Chuva: 0 mm (última hora)
+- Ondas: 1.2 m, direção 190°, período 8s
+
+
