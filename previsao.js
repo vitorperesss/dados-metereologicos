@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const venom = require('venom-bot');
 
-const numero = '5512999999999@c.us'; // Altere para o seu número com DDI + DDD + número
+const numero = '5512982098487@c.us'; // Altere para o seu número com DDI + DDD + número
 
 // Coordenadas de Ilhabela
 const LAT = -23.7785;

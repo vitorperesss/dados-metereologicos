@@ -26,8 +26,8 @@ Este projeto coleta dados do tempo e das ondas para Ilhabela-SP e envia automati
 ### 1. Clone o projeto
 
 ```bash
-git clone https://github.com/seu-usuario/previsao-ilhabela-whatsapp.git
-cd previsao-ilhabela-whatsapp
+git clone https://github.com/vitorperesss/dados-metereologicos.git
+cd dados-metereologicos
 
 
 2. Instale as dependências
